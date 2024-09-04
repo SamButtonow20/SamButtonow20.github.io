@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Samuel Buttonow's Webpage</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1d0000;
+            color: #333;
+        }
+
+        header {
+            background-color: #614a36;
+            color: #7d7171;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d1701b;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #000000;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #000000;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            scroll-margin-top: 45px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 40px;
+        }
+
+        .resume-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .resume-link:hover {
+            background-color: #0056b3;
+        }
+
+        img {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #e78c3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #c25e10;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Samuel Buttonow's Webpage</h1>
+        <a href="https://uncg.edu/">
+            <img src="https://uc.uncg.edu/wp-content/uploads/2023/03/uncg_emblem_3-color-e1680293422193.png"
+                alt="UNCG Logo" width="104" height="142">
+        </a>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h3>Hello, my name is Samuel Buttonow, welcome to my webpage.</h3>
+            <a href="https://media.licdn.com/">
+                <img src="https://media.licdn.com/dms/image/D4E03AQESPmCF2l8nBw/profile-displayphoto-shrink_200_200/0/1708381084573?e=2147483647&v=beta&t=sB0eH79Jz1G3Fm9lPFz8p0gY5r3NuIY6SxucAYVTEs4"
+                    alt="Self Portrait" width="210" height="200">
+            </a>
+        </section>
+
+        <section id="education" class="section">
+            <h4>Education:</h4>
+            <p>I am a current senior Computer Science student at UNCG, interested in languages such as C, HTML, and
+                Java.
+                <br> I am currently focusing on Web Development and Cyber Security.
+            </p>
+        </section>
+
+        <section id="experience" class="section">
+            <h4>Experience:</h4>
+            <p>I worked for Greensboro Country Club for 3 years as an outdoor manager for members and guests. My role
+                involved
+                <br> effective team communication and event management.
+            </p>
+        </section>
+
+        <section id="skills" class="section">
+            <h4>Skills:</h4>
+            <ol>
+                <li>Java</li>
+                <li>Basic HTML</li>
+                <li>Assembly</li>
+                <li>C/C#</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>LinkedIn Page:</h2>
+            <a href="https://www.linkedin.com/in/sam-buttonow-192b082b5/" class="resume-link" target="_blank">LinkedIn
+                Page</a>
+        </section>
+
+        <section class="section">
+            <h2>Homework Assignments:</h2>
+            <a href="csc372-hw/index.html" class="resume-link" target="_blank">Homework
+                #2</a>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Samuel Buttonow. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
