@@ -169,14 +169,15 @@ ul li:hover {
     width: 150px;
     padding: 10px;
     margin: 20px auto;
-    background-color: #2196f3;
+    background-color: #4caf50;
     color: white;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.2em;
+
 }
 
 .home-btn:hover {
-    background-color: #1976d2;
+    background-color: #4caf50;
 }
