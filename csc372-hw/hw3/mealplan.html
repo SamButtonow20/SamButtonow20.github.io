@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  Name: Sam Buttonow
+  Date: 09.04.2024
+  CSC 372-01
+  
+  This is my index.html page which contains the base information about Tony's Pizza, a few dish descriptions
+  and interactive tools for them, and a link to the mealplan.hmtl page. 
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plan</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./scripts/dish.js" defer></script>
+</head>
+
+<body>
+    <section id="meal-plan">
+        <aside id="dish-list">
+            <h2>Available Dishes</h2>
+            <ul>
+                <li onclick="addToMealPlan('Margherita Pizza', 12.99)">Margherita Pizza - $12.99</li>
+                <li onclick="addToMealPlan('Spaghetti Carbonara', 14.99)">Spaghetti Carbonara - $14.99</li>
+                <li onclick="addToMealPlan('Caesar Salad', 9.99)">Caesar Salad - $9.99</li>
+            </ul>
+        </aside>
+
+        <main id="meal-plan-summary">
+            <h2>Your Meal Plan</h2>
+            <ul id="selected-dishes">
+                <!-- Selected dishes will appear here -->
+            </ul>
+            <p>Total: $<span id="total-cost">0.00</span></p>
+        </main>
+    </section>
+    <section>
+        <a href="index.html" class="btn">Back to Home</a>
+    </section>
+
+
+
+
+
+</body>
+
+</html>

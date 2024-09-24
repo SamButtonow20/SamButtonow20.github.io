@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Introduction Section */
+#introduction {
+    background-color: #ffeb3b;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+#introduction h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+#introduction p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Recommendations Section */
+#recommendations {
+    padding: 20px;
+}
+
+.restaurant {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant h2 {
+    margin-top: 0;
+    color: #4caf50;
+}
+
+.dishes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.dish {
+    flex: 1 1 calc(33.333% - 20px);
+    text-align: center;
+}
+
+.dish img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.3s, width 0.3s, height 0.3s;
+}
+
+.dish img.active {
+    width: 150px;
+    height: 150px;
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+#dish-info {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#dish-info div {
+    display: none;
+}
+
+#dish-info div.active {
+    display: block;
+}
+
+#dish-info img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Meal Plan Page */
+#meal-plan {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+aside, main {
+    width: 45%;
+}
+
+aside {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+aside h2 {
+    margin-top: 0;
+    color: #4caf50;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+ul li:hover {
+    background-color: #f1f1f1;
+}
+
+#meal-plan-summary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#meal-plan-summary h2 {
+    margin-top: 0;
+    color: #4caf50;
+}
+
+#meal-plan-summary p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Home Button Styling */
+.home-btn {
+    display: block;
+    width: 150px;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: #2196f3;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.home-btn:hover {
+    background-color: #1976d2;
+}

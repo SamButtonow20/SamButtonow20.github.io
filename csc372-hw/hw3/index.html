@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recommendations</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./scripts/dish.js" defer></script>
+</head>
+
+<body>
+    <section id="introduction">
+        <h1>Discover the Best Eats Near Campus!</h1>
+        <p>Are you a culinary adventurer or someone who loves italian cuisine? Look no further! We've curated a list of
+            the most exceptional dishes that are sure to tantalize your taste buds. From fresh pizzas to mouthwatering
+            pasta dishes, this list has got you covered.Tony's Pizza on Tate Street has the italian dishes for an
+            exceptionally well ranged prices. Whether you're grabbing a quick bite between classes or indulging in a gourmet meal,
+            we've got the best spots near campus to satisfy your cravings. I highly recommend this spot for anyone who
+            would enjoy a true slice of italian pizza.</p>
+    </section>
+
+    <section id="recommendations">
+        <article class="restaurant">
+            <h2>Pizzeria Locale</h2>
+            <p>Location: 401 Tate St, Greensboro, NC 27403 (Open 10:30 AM - 10 PM)</p>
+            <p>Specialties: Authentic wood-fired pizza, pasta, salads</p>
+            <div class="dishes">
+                <div class="dish" onclick="showDishInfo('pizza')">
+                    <img src="images/margpizza.jpg" alt="Margherita Pizza" id="pizza">
+                    <p>Margherita Pizza</p>
+                </div>
+                <div class="dish" onclick="showDishInfo('pasta')">
+                    <img src="images/pasta.jpg" alt="Spaghetti Carbonara" id="pasta">
+                    <p>Spaghetti Carbonara</p>
+                </div>
+                <div class="dish" onclick="showDishInfo('salad')">
+                    <img src="images/salad.jpg" alt="Caesar Salad" id="salad">
+                    <p>Caesar Salad</p>
+                </div>
+            </div>
+            <div id="dish-info">
+                <div id="pizza-info">
+                    <img src="images/margpizza.jpg" alt="Margherita Pizza">
+                    <p>Margherita Pizza - $12.99</p>
+                    <p>Classic margherita pizza with fresh tomatoes, basil, and mozzarella cheese.</p>
+                </div>
+                <div id="pasta-info">
+                    <img src="images/pasta.jpg" alt="Spaghetti Carbonara">
+                    <p>Spaghetti Carbonara - $14.99</p>
+                    <p>Creamy pasta with pancetta, eggs, and Parmesan cheese.</p>
+                </div>
+                <div id="salad-info">
+                    <img src="images/salad.jpg" alt="Caesar Salad">
+                    <p>Caesar Salad - $9.99</p>
+                    <p>Crisp romaine lettuce with Caesar dressing, croutons, and Parmesan cheese.</p>
+                </div>
+            </div>
+            <a href="mealplan.html" class="btn">Create Your Meal Plan</a>
+        </article>
+    </section>
+</body>
+
+</html>
