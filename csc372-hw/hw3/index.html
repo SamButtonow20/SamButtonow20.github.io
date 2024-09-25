@@ -5,7 +5,8 @@
   Date: 09.04.2024
   CSC 372-01
   
-  This is my index.html page which contains the base information about Tony's Pizza, a few dish descriptions
+  This is my index.html page which contains the base information about Tony's Pizza,
+  New York Pizza, and Manhattan Pizza, a few dish descriptions
   and interactive tools for them, and a link to the mealplan.hmtl page. 
 -->
 <head>
@@ -19,16 +20,19 @@
 <body>
     <section id="introduction">
         <h1>Discover the Best Eats Near Campus!</h1>
-        <p>Are you a culinary adventurer or someone who loves italian cuisine? Look no further! We've curated a list of
+        <p>Are you a culinary adventurer or someone who loves Italian cuisine? Look no further! We've curated a list of
             the most exceptional dishes that are sure to tantalize your taste buds. From fresh pizzas to mouthwatering
-            pasta dishes, this list has got you covered.Tony's Pizza on Tate Street has the italian dishes for an
-            exceptionally well ranged prices. Whether you're grabbing a quick bite between classes or indulging in a gourmet meal,
-            we've got the best spots near campus to satisfy your cravings. I highly recommend this spot for anyone who
-            would enjoy a true slice of italian pizza.</p>
-    </section>
+            pasta dishes, this list has got you covered. Tony's Pizza, Manhattan Pizza, and New York pizza all which
+            are on Tate Street,has a selection Italian dishes for exceptionally well-priced. Whether you're grabbing a quick bite
+             between classes or indulging in a gourmet meal, we've got the best spots near campus to satisfy your cravings. 
+             I highly recommend these spots for anyone who enjoys a true slice of Italian pizza. Personally, Tony's is my favorite
+             but Manhattan Pizza has a great tiramisu.<p>
+    </section> 
 
     <section id="recommendations">
         <h2>Our Top Recommendations</h2>
+        <a href="mealplan.html" class="btn">Create Your Meal Plan</a>
+        <!-- First Restaurant -->
         <article class="restaurant">
             <h3>Pizzeria Locale</h3>
             <p>Location: 401 Tate St, Greensboro, NC 27403 (Open 10:30 AM - 10 PM)</p>
@@ -64,7 +68,84 @@
                     <p>Crisp romaine lettuce with Caesar dressing, croutons, and Parmesan cheese.</p>
                 </div>
             </div>
-            <a href="mealplan.html" class="btn">Create Your Meal Plan</a>
+           
+        </article>
+
+        <!-- Second Restaurant -->
+        <article class="restaurant">
+            <h3>New York Pizza</h3>
+            <p>Location: 337 Tate St, Greensboro, NC 27403 (Open 12 AM - 2 AM)</p>
+            <p>Specialties: Delicious lasagna, handmade ravioli, Italian desserts</p>
+            <div class="dishes">
+                <div class="dish" onclick="showDishInfo('lasagna')">
+                    <img src="images/lasagna.jpg" alt="Lasagna" id="lasagna">
+                    <p>Lasagna</p>
+                </div>
+                <div class="dish" onclick="showDishInfo('tiramisu')">
+                    <img src="images/tirmasa.jpg" alt="Tiramisu" id="tiramisu">
+                    <p>Tiramisu</p>
+                </div>
+                <div class="dish" onclick="showDishInfo('ravioli')">
+                    <img src="images/ravioli.jpg" alt="Spinach Ricotta Ravioli" id="ravioli">
+                    <p>Spinach Ricotta Ravioli</p>
+                </div>
+            </div>
+            <div id="dish-info">
+                <div id="lasagna-info">
+                    <img src="images/lasagna.jpg" alt="Lasagna">
+                    <p>Lasagna - $13.99</p>
+                    <p>Layered pasta with ground beef, ricotta, mozzarella, and marinara sauce.</p>
+                </div>
+                <div id="tiramisu-info">
+                    <img src="images/tirmasa.jpg" alt="Tiramisu">
+                    <p>Tiramisu - $6.99</p>
+                    <p>Classic Italian dessert with coffee-soaked ladyfingers, mascarpone, and cocoa.</p>
+                </div>
+                <div id="ravioli-info">
+                    <img src="images/ravioli.jpg" alt="Spinach Ricotta Ravioli">
+                    <p>Spinach Ricotta Ravioli - $12.99</p>
+                    <p>Homemade ravioli filled with spinach and ricotta, served with marinara sauce.</p>
+                </div>
+            </div>
+           
+        </article>
+
+        <!-- Third Restaurant -->
+        <article class="restaurant">
+            <h3>Manhattan Pizza</h3>
+            <p>Location: 449 Tate St, Greensboro, NC 27403 (Open 11 AM - 3 AM)</p>
+            <p>Specialties: Gourmet pizza, seafood pasta, house-made bread</p>
+            <div class="dishes">
+                <div class="dish" onclick="showDishInfo('seafood-pasta')">
+                    <img src="images/garlicbread.jpg" alt="Garlic Bread" id="garlic-bread">
+                    <p>Garlic Bread</p>
+                </div>
+                <div class="dish" onclick="showDishInfo('bruschetta')">
+                    <img src="images/Bruschetta.jpg" alt="Bruschetta" id="bruschetta">
+                    <p>Bruschetta</p>
+                </div>
+                <div class="dish" onclick="showDishInfo('risotto')">
+                    <img src="images/mushroomrisotta.jpg" alt="Mushroom Risotto" id="risotto">
+                    <p>Mushroom Risotto</p>
+                </div>
+            </div>
+            <div id="dish-info">
+                <div id="seafood-pasta-info">
+                    <img src="images/garlicbread.jpg" alt="Garlic Bread">
+                    <p>Garlic Bread - $9.99</p>
+                    <p>Garlic and buttery bread that works perfectly with any sauces you like.</p>
+                </div>
+                <div id="bruschetta-info">
+                    <img src="images/Bruschetta.jpg" alt="Bruschetta">
+                    <p>Bruschetta - $7.99</p>
+                    <p>Grilled bread topped with fresh tomatoes, basil, and olive oil.</p>
+                </div>
+                <div id="risotto-info">
+                    <img src="images/mushroomrisotta.jpg" alt="Mushroom Risotto">
+                    <p>Mushroom Risotto - $15.99</p>
+                    <p>Creamy Arborio rice cooked with mushrooms, garlic, and Parmesan cheese.</p>
+                </div>
+            </div>
         </article>
     </section>
 </body>

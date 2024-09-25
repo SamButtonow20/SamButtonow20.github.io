@@ -7,8 +7,8 @@
   CSC 372-01
   
   This is my mealplan.html page which contains a way to add up the what-if total for some of Tony's Pizza
-  dishes, and a remove button for them if they wish to remove the item from the list. There is also a link
-  back to the index.html page.
+  dishes, New York Pizza, and Manhattan Pizza and a remove button for them if they wish to remove the item from the list. 
+  There is also a link back to the index.html page.
 -->
 <head>
     <meta charset="UTF-8">
@@ -20,14 +20,44 @@
 
 <body>
     <section id="meal-plan">
-        <aside id="dish-list">
-            <h2>Available Dishes</h2>
-            <ul>
-                <li onclick="addToMealPlan('Margherita Pizza', 12.99)">Margherita Pizza - $12.99</li>
-                <li onclick="addToMealPlan('Spaghetti Carbonara', 14.99)">Spaghetti Carbonara - $14.99</li>
-                <li onclick="addToMealPlan('Caesar Salad', 9.99)">Caesar Salad - $9.99</li>
-            </ul>
-        </aside>
+        <!-- Tony's Pizza Section -->
+        <article id="tonys-pizza">
+            <h2>Tony's Pizza Dishes</h2>
+            <aside id="dish-list">
+                <h3>Available Dishes</h3>
+                <ul>
+                    <li onclick="addToMealPlan('Margherita Pizza', 12.99)">Margherita Pizza - $12.99</li>
+                    <li onclick="addToMealPlan('Spaghetti Carbonara', 14.99)">Spaghetti Carbonara - $14.99</li>
+                    <li onclick="addToMealPlan('Caesar Salad', 9.99)">Caesar Salad - $9.99</li>
+                </ul>
+            </aside>
+        </article>
+
+        <!-- New York Pizza Section -->
+        <article id="new-york-pizza">
+            <h2>New York Pizza Dishes</h2>
+            <aside id="dish-list">
+                <h3>Available Dishes</h3>
+                <ul>
+                    <li onclick="addToMealPlan('Lasagna', 13.99)">Lasagna - $13.99</li>
+                    <li onclick="addToMealPlan('Tiramisu', 6.99)">Tiramisu - $6.99</li>
+                    <li onclick="addToMealPlan('Spinach Ricotta Ravioli', 12.99)">Spinach Ricotta Ravioli - $12.99</li>
+                </ul>
+            </aside>
+        </article>
+
+        <!-- Manhattan Pizza Section -->
+        <article id="manhattan-pizza">
+            <h2>Manhattan's Dishes</h2>
+            <aside id="dish-list">
+                <h3>Available Dishes</h3>
+                <ul>
+                    <li onclick="addToMealPlan('Garlic Bread', 9.99)">Garlic Bread - $9.99</li>
+                    <li onclick="addToMealPlan('Bruschetta', 7.99)">Bruschetta - $7.99</li>
+                    <li onclick="addToMealPlan('Mushroom Risotto', 15.99)">Mushroom Risotto - $15.99</li>
+                </ul>
+            </aside>
+        </article>
 
         <div id="meal-plan-summary">
             <h2>Your Meal Plan</h2>
