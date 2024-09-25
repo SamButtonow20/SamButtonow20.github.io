@@ -112,21 +112,28 @@ a {
 #meal-plan {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
     padding: 20px;
 }
 
-aside, main {
-    width: 45%;
-}
-
-aside {
+#meal-plan aside {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
 }
 
-aside h2 {
+#meal-plan main {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+aside h2, main h2 {
     margin-top: 0;
     color: #4caf50;
 }
@@ -146,18 +153,6 @@ ul li:hover {
     background-color: #f1f1f1;
 }
 
-#meal-plan-summary {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#meal-plan-summary h2 {
-    margin-top: 0;
-    color: #4caf50;
-}
-
 #meal-plan-summary p {
     font-size: 1.2em;
     font-weight: bold;
@@ -175,9 +170,8 @@ ul li:hover {
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.2em;
-
 }
 
 .home-btn:hover {
-    background-color: #4caf50;
+    background-color: #45a049;
 }
