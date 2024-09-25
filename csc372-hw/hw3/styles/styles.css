@@ -91,6 +91,61 @@ a {
     height: auto;
 }
 
+/* Meal Plan Page */
+#meal-plan {
+    display: flex; /* Align items in a row */
+    justify-content: space-between; /* Space out items */
+    padding: 20px;
+    margin: 20px; /* Add some margin for spacing */
+    background-color: #fff; /* Add background color to the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+aside {
+    width: 45%; /* Adjust width as necessary */
+    padding: 10px; /* Add padding for aesthetics */
+    background-color: #e8f5e9; /* Light green background for dishes */
+    border-radius: 8px; /* Rounded corners */
+}
+
+#dish-list h2,
+#meal-plan-summary h2 {
+    color: #4caf50; /* Header color */
+    margin-top: 0; /* Remove default margin */
+}
+
+#meal-plan-summary {
+    width: 45%; /* Adjust width as necessary */
+    padding: 10px; /* Add padding for aesthetics */
+    background-color: #fce4ec; /* Light pink background for meal plan summary */
+    border-radius: 8px; /* Rounded corners */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 10px; /* Padding for clickable items */
+    background-color: #fff; /* White background for each dish */
+    border-radius: 5px; /* Rounded corners for dishes */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+ul li:hover {
+    background-color: #f1f1f1; /* Highlight on hover */
+}
+
+#meal-plan-summary p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 /* Button Styling */
 .btn {
     display: inline-block;
@@ -108,32 +163,27 @@ a {
     background-color: #45a049;
 }
 
-/* Meal Plan Page */
-#meal-plan {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 20px;
+/* Centering the Home Button */
+.home-btn {
+    display: block; /* Ensure it's treated as a block-level element */
+    width: 150px; /* Set a specific width for the button */
+    padding: 10px; /* Add padding for aesthetics */
+    margin: 20px auto; /* Center the button by using auto left and right margins */
+    background-color: #4caf50; /* Button background color */
+    color: white; /* Button text color */
+    text-align: center; /* Center text inside the button */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2em; /* Font size */
 }
 
-#meal-plan aside {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 45%;
+.home-btn:hover {
+    background-color: #45a049; /* Button hover effect */
 }
 
-#meal-plan main {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 45%;
-}
 
-aside h2, main h2 {
+aside h2,
+main h2 {
     margin-top: 0;
     color: #4caf50;
 }
@@ -156,22 +206,4 @@ ul li:hover {
 #meal-plan-summary p {
     font-size: 1.2em;
     font-weight: bold;
-}
-
-/* Home Button Styling */
-.home-btn {
-    display: block;
-    width: 150px;
-    padding: 10px;
-    margin: 20px auto;
-    background-color: #4caf50;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-}
-
-.home-btn:hover {
-    background-color: #45a049;
 }
