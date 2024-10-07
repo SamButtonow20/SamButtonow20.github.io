@@ -16,7 +16,7 @@ function computerThinking() {
     let index = 0;
     return new Promise((resolve) => {
         const interval = setInterval(() => {
-            computerDisplay.src = `images/${choices[index]}.png`;
+            computerDisplay.src = `images/${choices[index]}.PNG`;
             index = (index + 1) % 3;
         }, 500);
 
@@ -24,7 +24,7 @@ function computerThinking() {
             clearInterval(interval);
             const randomChoice = choices[Math.floor(Math.random() * 3)];
             computerChoice = randomChoice;
-            computerDisplay.src = `images/${computerChoice}.png`;
+            computerDisplay.src = `images/${computerChoice}.PNG`;
             resolve();
         }, 3000);
     });
@@ -84,7 +84,7 @@ document.getElementById("reset").addEventListener("click", () => {
     document.getElementById("losses").textContent = 0;
     document.getElementById("ties").textContent = 0;
     resultDisplay.textContent = "Make a move to start!";
-    computerDisplay.src = "images/question-mark.png";
+    computerDisplay.src = "images/question-mark.PNG";
 });
 
 
