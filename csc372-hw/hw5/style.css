@@ -71,6 +71,18 @@ header button:hover {
   vertical-align: middle;
 }
 
+/* Styling for additional repo information */
+.repo-card p {
+  font-size: 0.95em;
+  color: #6c757d;
+  margin: 0.5em 0;
+  line-height: 1.5;
+}
+
+.repo-card p:last-of-type {
+  margin-bottom: 1em; /* Adds extra space before the link */
+}
+
 /* Styling for GitHub icon in the link */
 .repo-card a .fab.fa-github {
   margin-right: 8px;
@@ -79,7 +91,6 @@ header button:hover {
 .repo-card a:hover .fab.fa-github {
   color: #ffffff; /* Change to white when hovering */
 }
-
 
 .repo-card a {
   display: inline-block;
@@ -125,4 +136,3 @@ a .fab.fa-github {
 a:hover .fab.fa-github {
   color: #0366d6; /* Hover effect */
 }
-

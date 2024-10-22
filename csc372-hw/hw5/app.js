@@ -15,46 +15,73 @@ function fetchRepos(username) {
 
   fetch(url)
     .then(response => response.json())
-    .then(data => displayRepos(data))
+    .then(data => {
+      repoGallery.innerHTML = ''; // Clear previous data only once
+
+      // Fetch additional details for each repo
+      data.forEach(repo => {
+        fetchAdditionalRepoDetails(repo, username);
+      });
+    })
     .catch(error => console.error('Error fetching repositories:', error));
 }
 
-// Function to display the repository data
-function displayRepos(repos) {
-  repoGallery.innerHTML = ''; // Clear previous data
+// Fetch additional details like commits and languages for each repo
+function fetchAdditionalRepoDetails(repo, username) {
+  const commitsUrl = `https://api.github.com/repos/${username}/${repo.name}/commits`;
+  const languagesUrl = `https://api.github.com/repos/${username}/${repo.name}/languages`;
 
-  repos.forEach(repo => {
-    // Create repository card
-    const repoCard = document.createElement('div');
-    repoCard.classList.add('repo-card');
-
-    // Repository name with GitHub icon
-    const repoName = document.createElement('h2');
-    repoName.innerHTML = `<i class="fab fa-github"></i> ${repo.name}`;
-
-    // Repository description
-    const repoDescription = document.createElement('p');
-    repoDescription.textContent = repo.description || 'No description available';
-
-    // Repository creation and update dates
-    const repoDates = document.createElement('p');
-    repoDates.textContent = `Created: ${new Date(repo.created_at).toLocaleDateString()} | Updated: ${new Date(repo.updated_at).toLocaleDateString()}`;
-
-    // View Repository link with GitHub icon
-    const repoLink = document.createElement('a');
-    repoLink.href = repo.html_url;
-    repoLink.innerHTML = `<i class="fab fa-github"></i> View Repository`;
-    repoLink.target = '_blank';
-
-    // Append elements to the card
-    repoCard.appendChild(repoName);
-    repoCard.appendChild(repoDescription);
-    repoCard.appendChild(repoDates);
-    repoCard.appendChild(repoLink);
-    repoGallery.appendChild(repoCard);
-  });
+  // Fetch commits and languages in parallel
+  Promise.all([
+    fetch(commitsUrl).then(res => res.json()),
+    fetch(languagesUrl).then(res => res.json())
+  ])
+    .then(([commits, languages]) => {
+      displayRepo(repo, commits.length, languages);
+    })
+    .catch(error => console.error('Error fetching additional repo details:', error));
 }
 
+// Function to display the repository data
+function displayRepo(repo, commitCount, languages) {
+  // Create repository card
+  const repoCard = document.createElement('div');
+  repoCard.classList.add('repo-card');
+
+  const repoName = document.createElement('h2');
+  repoName.innerHTML = `<i class="fab fa-github"></i> ${repo.name}`;
+
+  const repoDescription = document.createElement('p');
+  repoDescription.textContent = repo.description || 'No description available';
+
+  const repoDates = document.createElement('p');
+  repoDates.textContent = `Created: ${new Date(repo.created_at).toLocaleDateString()} | Updated: ${new Date(repo.updated_at).toLocaleDateString()}`;
+
+  const repoCommits = document.createElement('p');
+  repoCommits.textContent = `Commits: ${commitCount}`;
+
+  const repoLanguages = document.createElement('p');
+  repoLanguages.textContent = `Languages: ${Object.keys(languages).join(', ') || 'No languages available'}`;
+
+  const repoWatchers = document.createElement('p');
+  repoWatchers.textContent = `Watchers: ${repo.watchers_count || 0}`; // Default to 0 if undefined
+
+  const repoLink = document.createElement('a');
+  repoLink.href = repo.html_url;
+  repoLink.textContent = 'View Repository';
+  repoLink.target = '_blank';
+
+  // Append elements to the card
+  repoCard.appendChild(repoName);
+  repoCard.appendChild(repoDescription);
+  repoCard.appendChild(repoDates);
+  repoCard.appendChild(repoCommits);
+  repoCard.appendChild(repoLanguages);
+  repoCard.appendChild(repoWatchers);
+  repoCard.appendChild(repoLink);
+
+  repoGallery.appendChild(repoCard); // Add the card to the gallery
+}
 
 // Load default profile on page load
 fetchRepos(defaultUsername);
