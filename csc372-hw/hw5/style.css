@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Header Styles */
+header {
+  background-color: #24292e;
+  color: white;
+  padding: 2em 1em;
+  text-align: center;
+}
+
+header input {
+  padding: 0.75em;
+  width: 250px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 0.5em;
+}
+
+header button {
+  padding: 0.75em 1.5em;
+  background-color: #0366d6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+header button:hover {
+  background-color: #0051a1;
+}
+
+/* Gallery Layout */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2em;
+  gap: 1.5em; /* Adds space between cards */
+}
+
+.repo-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5em;
+  width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.repo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for GitHub icon next to repo name */
+.repo-card h2 .fab.fa-github {
+  margin-right: 10px;
+  color: #24292e;
+  vertical-align: middle;
+}
+
+/* Styling for GitHub icon in the link */
+.repo-card a .fab.fa-github {
+  margin-right: 8px;
+}
+
+.repo-card a:hover .fab.fa-github {
+  color: #ffffff; /* Change to white when hovering */
+}
+
+
+.repo-card a {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.6em 1.2em;
+  background-color: #0366d6;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.repo-card a:hover {
+  background-color: #0051a1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2em 1em;
+  background-color: #24292e;
+  color: white;
+  font-size: 0.85em;
+}
+
+footer p {
+  margin: 0;
+  color: #ddd;
+}
+
+.fab.fa-github {
+  color: #24292e; /* GitHub brand color */
+  margin-left: 0.5em;
+  font-size: 1.5em;
+}
+
+a .fab.fa-github {
+  font-size: 1.2em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+a:hover .fab.fa-github {
+  color: #0366d6; /* Hover effect */
+}
+
